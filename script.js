@@ -2,6 +2,9 @@ const searchForm = document.querySelector("form");
 const movieContainer = document.querySelector(".movie-container");
 const inputBox = document.querySelector(".inputBox");
 
+const searchBtn = document.querySelector(".searchBtn");
+
+
 //Adding event listener to search form
 searchForm.addEventListener('submit',(e)=>{
 
@@ -13,6 +16,16 @@ searchForm.addEventListener('submit',(e)=>{
 
     }
 })
+
+searchBtn.addEventListener("onclick",()=>{
+
+    e.preventDefault();
+
+    const movieName = inputBox.value.trim();
+    if(movieName!==''){
+        getMovieInfo(movieName);
+
+    }})
 
 
 //function to fetch movie details using OMDB API
