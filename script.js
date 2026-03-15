@@ -31,7 +31,7 @@ searchBtn.addEventListener("onclick",()=>{
 //function to fetch movie details using OMDB API
 const getMovieInfo = async (movie)=>{
     const myAPIkey = "f9665fff";
-    const url = `http://www.omdbapi.com/?apikey=${myAPIkey}&t=${movie}`;
+    const url = `https://www.omdbapi.com/?apikey=${myAPIkey}&t=${movie}`;
 
     const response = await fetch(url);
     const data = await response.json();
