@@ -17,7 +17,7 @@ searchForm.addEventListener('submit',(e)=>{
     }
 })
 
-searchBtn.addEventListener("onclick",()=>{
+searchBtn.addEventListener("click",()=>{
 
     e.preventDefault();
 
@@ -31,7 +31,7 @@ searchBtn.addEventListener("onclick",()=>{
 //function to fetch movie details using OMDB API
 const getMovieInfo = async (movie)=>{
     const myAPIkey = "f9665fff";
-    const url = `https://www.omdbapi.com/?apikey=f9665fff&t=${movieName}`;
+    const url = `https://www.omdbapi.com/?apikey=f9665fff&t=${movie}`;
 
     const response = await fetch(url);
     const data = await response.json();
